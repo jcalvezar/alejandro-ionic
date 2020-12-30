@@ -1,0 +1,61 @@
+<!--
+  Generated template for the SchedulePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Schedule</ion-title>
+		<ion-buttons end>
+			<button (click)="openMyList()" ion-button>
+				<ion-icon name="calendar"></ion-icon>
+			</button>
+		</ion-buttons>
+  </ion-navbar>
+	
+  <ion-toolbar color="primary">
+		<ion-buttons left>
+				<button ion-button small color="light" clear>
+					{{ jcaProveedor.hoy.getDate() }}<br>
+					{{ jcaProveedor.days[ jcaProveedor.hoy.getDay() ] }}
+				</button>
+		</ion-buttons>
+		<ion-title>Today List</ion-title>
+		<ion-buttons end>
+			<button ion-button>
+				{{ jcaProveedor.eventos.length }} tasks
+			</button>
+		</ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content >
+
+	<ion-fab bottom right>
+    <button ion-fab  (click)="openMyList()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+	
+	<ion-grid>
+		<ion-row>
+			<ion-col col-3><strong>Time</strong></ion-col>
+			<ion-col col-9><strong>Events</strong></ion-col>
+		</ion-row>
+		<ion-row *ngFor="let evento of jcaProveedor.eventos">
+			<ion-col col-2>{{ evento.hora }}</ion-col>
+			<ion-col col-10>
+				<ion-card>
+					<ion-row>
+						<ion-col col-10><strong>{{ evento.titulo }}</strong></ion-col>
+						<ion-col col-2 text-right><ion-icon [name]="evento.icono"></ion-icon></ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col col-10>{{ evento.texto }}</ion-col>
+						<ion-col col-2 text-right><ion-icon name="more"></ion-icon></ion-col>
+					</ion-row>
+				</ion-card>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

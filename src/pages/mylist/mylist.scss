@@ -1,0 +1,12 @@
+page-mylist {
+	.jcontainer {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .jitem {
+    width: 50%;
+  }
+	.card {
+		background-color: #F0F3F6; // black
+	}
+}

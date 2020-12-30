@@ -1,8 +1,8 @@
 {
-  "name": "alejandro",
+  "name": "Alejandro",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "Juan Carlos Alvez",
+  "homepage": "http://jcalvez.info/",
   "private": true,
   "scripts": {
     "start": "ionic-app-scripts serve",
@@ -33,5 +33,5 @@
     "@ionic/app-scripts": "3.2.4",
     "typescript": "2.6.2"
   },
-  "description": "An Ionic project"
+  "description": "An JCA project"
 }
