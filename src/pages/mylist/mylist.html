@@ -15,7 +15,7 @@
 	
 		<ion-slides slidesPerView=6>
 			<ion-slide *ngFor="let fecha of jcaProveedor.fechas">
-				<button ion-button small [color]="fecha.color" clear>
+				<button ion-button small [color]="fecha.color" clear (click)="openSchedule()">
 					{{ fecha.nro }}<br>
 					{{ fecha.dia }}
 				</button>
@@ -28,14 +28,14 @@
 <ion-content padding>
 
 	<ion-fab bottom right>
-    <button ion-fab ><ion-icon name="add"></ion-icon></button>
+    <button ion-fab (click)="openSchedule()"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
 	
 	<div class="jcontainer">
 		<div class="jitem" *ngFor="let carta of jcaProveedor.cartas">
 			<ion-card text-center>
 				
-					<button ion-button icon-only round large clear>
+					<button ion-button icon-only round large clear (click)="openSchedule()">
 						<ion-icon [name]="carta.icono"></ion-icon>
 					</button>
 		

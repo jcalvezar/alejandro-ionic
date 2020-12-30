@@ -7,4 +7,11 @@ page-schedule {
 	.row{
 		align-items: center;
 	}
+	.timeline {
+		background: linear-gradient(#000, #000) no-repeat center/2px 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 120px;
+	}
 }

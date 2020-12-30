@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { DatosProvider } from '../../providers/datos/datos';
+import { SchedulePage } from '../schedule/schedule';
 
 /**
  * Generated class for the MylistPage page.
@@ -29,4 +30,7 @@ export class MylistPage {
     console.log('ionViewDidLoad MylistPage');
   }
 
+	openSchedule() {
+		this.navCtrl.push(SchedulePage);
+	}
 }

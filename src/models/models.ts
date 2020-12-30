@@ -8,8 +8,10 @@ export interface JCA_fecha {
 
 export interface JCA_evento {
 	hora: string,
+	icono: string,
 	titulo: string,
-	texto: string
+	texto: string,
+	checked: boolean
 };
 
 export interface JCA_carta {

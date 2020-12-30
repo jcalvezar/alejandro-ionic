@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { DatosProvider } from '../../providers/datos/datos';
-import { MylistPage } from '../mylist/mylist';
 
 /**
  * Generated class for the SchedulePage page.
@@ -24,7 +23,9 @@ export class SchedulePage {
     console.log('ionViewDidLoad SchedulePage');
   }
 
-	openMyList() {
-		this.navCtrl.push(MylistPage);
+	setChecked(indice) {
+		for(var i=0; i < this.jcaProveedor.eventos.length; i++) {
+			if (i == indice) this.jcaProveedor.eventos[i].checked = true; else this.jcaProveedor.eventos[i].checked = false;
+		}
 	}
 }
