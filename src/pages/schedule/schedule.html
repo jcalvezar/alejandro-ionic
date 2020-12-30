@@ -39,11 +39,12 @@
 	
 	<ion-grid>
 		<ion-row>
-			<ion-col col-3><strong>Time</strong></ion-col>
+			<ion-col col-2 text-center><strong>Time</strong></ion-col>
+			<ion-col col-1 >&nbsp;</ion-col>
 			<ion-col col-9><strong>Events</strong></ion-col>
 		</ion-row>
 		<ion-row *ngFor="let evento of jcaProveedor.eventos; let i = index">
-			<ion-col col-2>{{ evento.hora }}</ion-col>
+			<ion-col col-2 text-center>{{ evento.hora }}</ion-col>
 			<ion-col col-1 class="timeline"><ion-icon name="radio-button-on" *ngIf="evento.checked"></ion-icon></ion-col>
 			<ion-col col-9>
 				<ion-card (click)="setChecked(i)">
